@@ -321,7 +321,7 @@ address { font-style: italic; }
     display: block;
     margin-bottom: 2px;
 }
-.careplus-booking-btn {
+.careplus-top-btn {
     float: right;
     font-size: 14px;
     font-weight: bold;
@@ -330,6 +330,7 @@ address { font-style: italic; }
     color: #ffffff;
     border-radius: 4px;
     margin-top: 41px;
+    margin-left: 10px;
 }
 .careplus-navigation-section {
     position: relative;
