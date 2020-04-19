@@ -97,6 +97,12 @@ jQuery(document).ready(function($) {
         }, 800);
         return false;
     });
+    jQuery('a[href="#footer"]').on("click", function() {
+      jQuery('html, body').animate({
+        scrollTop: $(document).height()
+    }, 800);
+    return false;
+  });
     //***************************
     // Parent AddClass Function
     //***************************
@@ -141,57 +147,6 @@ jQuery(document).ready(function($) {
         });
         jQuery('#year').text(austDay.getFullYear());
     });
-
-    //***************************
-    // ThumbSlider Functions
-    //***************************
-    jQuery('.careplus-tabs-thumb,.careplus-tabs-text').slick({
-          slidesToShow: 1,
-          autoplay: false,
-          slidesToScroll: 1,
-          arrows: false,
-          fade: true,
-          asNavFor: '.careplus-tabs-list'
-        });
-        jQuery('.careplus-tabs-list').slick({
-          slidesToShow: 5,
-          slidesToScroll: 1,
-          autoplay: false,
-          asNavFor: '.careplus-tabs-thumb,.careplus-tabs-text',
-          dots: false,
-          arrows: false,
-          vertical: false,
-          centerMode: false,
-          focusOnSelect: true,
-          responsive: [
-                {
-                  breakpoint: 1024,
-                  settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    vertical: false,
-                  }
-                },
-                {
-                  breakpoint: 800,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    vertical: false,
-                  }
-                },
-                {
-                  breakpoint: 400,
-                  settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    vertical: false,
-                  }
-                }
-              ],
-        });
-    
 
 });
 
@@ -280,3 +235,20 @@ $('.myform').on('submit',function(){
     return false;   
 });
 
+$(".careplus-appointment-form").html(`<form>
+<label>Login</label>
+<p>Login to your account.</p>
+<ul>
+    <li>
+        <input type="text" placeholder="UserName">
+        <i class="fa fa-user"></i>
+    </li>
+    <li>
+        <input type="password" placeholder="password">
+        <i class="fa fa-key"></i>
+    </li>
+    <li>
+        <input type="submit" value="login">
+    </li>
+</ul>
+</form>`)
